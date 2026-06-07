@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buildsys Stock — Kullanım Şartları</title>
+  <style>
+    :root {
+      --primary: #4a0000;
+      --primary-deep: #2d0000;
+      --accent: #c9a227;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --bg: #f7f5f2;
+      --card: #ffffff;
+      --border: #e8e4de;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .topbar {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand { font-weight: 700; letter-spacing: 0.3px; }
+    .lang-switch button {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.45);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 6px;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--primary-deep);
+      font-weight: 600;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(74,0,0,0.06);
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 1.75rem;
+      margin-bottom: 8px;
+    }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 28px; }
+    h2 {
+      color: var(--primary-deep);
+      font-size: 1.1rem;
+      margin: 28px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
+    }
+    p, li { color: #333; margin-bottom: 10px; }
+    ul, ol { padding-left: 22px; margin-bottom: 14px; }
+    .note {
+      background: #fdf8eb;
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--primary); }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Buildsys Stock</div>
+    <div class="lang-switch">
+      <button type="button" id="btn-tr" class="active" onclick="setLang('tr')">Türkçe</button>
+      <button type="button" id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="card">
+      <!-- Türkçe -->
+      <div data-lang="tr" class="visible">
+        <h1>Kullanım Şartları</h1>
+        <p class="updated">Son güncelleme: 6 Haziran 2026</p>
+
+        <p>
+          Bu Kullanım Şartları (“Şartlar”), <strong>Buildsys Stock</strong> mobil
+          uygulamasının (“Uygulama”) kullanımına ilişkin kuralları belirler.
+          Uygulamayı indirerek, kayıt olarak veya kullanarak bu Şartları kabul etmiş sayılırsınız.
+        </p>
+
+        <div class="note">
+          Uygulama verileri <strong>Google Firebase</strong> üzerinde işlenir;
+          operasyonel fotoğraflar <strong>30 gün</strong> sonra silinir;
+          şifreler <strong>şifreli (hash)</strong> olarak saklanır.
+          Ayrıntılar için <a href="gizlilik.html">Gizlilik Politikası</a>’na bakınız.
+        </div>
+
+        <h2>1. Hizmet Tanımı</h2>
+        <p>
+          Buildsys Stock; depo, stok, mal kabul, transfer, sarf ve onay süreçlerini
+          yönetmek için tasarlanmış kurumsal bir envanter takip uygulamasıdır.
+          Hizmet “olduğu gibi” sunulur; kesintisiz erişim garanti edilmez.
+        </p>
+
+        <h2>2. Hesap ve Yetkilendirme</h2>
+        <ul>
+          <li>Her işletme benzersiz bir işletme numarası ile tanımlanır.</li>
+          <li>Admin hesabı işletme kurulumunda oluşturulur; operatör hesapları admin tarafından açılır.</li>
+          <li>Hesap bilgilerinizin gizliliğinden siz sorumlusunuz; yetkisiz kullanımı derhal bildirin.</li>
+          <li>Google ile giriş isteğe bağlıdır; mevcut işletme hesabınıza bağlanır.</li>
+        </ul>
+
+        <h2>3. Kabul Edilebilir Kullanım</h2>
+        <p>Aşağıdaki eylemler yasaktır:</p>
+        <ul>
+          <li>Yetkisiz veri erişimi, başka işletmelerin verilerine müdahale</li>
+          <li>Sahte stok hareketi, yanıltıcı fotoğraf veya belge yükleme</li>
+          <li>Uygulamanın güvenlik önlemlerini aşmaya çalışma</li>
+          <li>Tersine mühendislik, otomatik veri kazıma (scraping)</li>
+          <li>Yürürlükteki mevzuata aykırı kullanım</li>
+        </ul>
+
+        <h2>4. Veri ve İçerik</h2>
+        <ul>
+          <li>Yüklediğiniz stok verileri ve fotoğrafların doğruluğundan siz sorumlusunuz.</li>
+          <li>Veriler Google Firebase sunucularında saklanır; bölgesel ve yedekleme politikaları Google tarafından yönetilir.</li>
+          <li>Fotoğraflar yükleme tarihinden itibaren en fazla 30 gün tutulur, ardından otomatik silinir.</li>
+          <li>Excel arşivleri ve hareket kayıtları iş süreçleri için daha uzun süre saklanabilir.</li>
+        </ul>
+
+        <h2>5. Fikri Mülkiyet</h2>
+        <p>
+          Uygulama, arayüz, logo ve yazılım kodu Buildsys Stock’a aittir.
+          İzinsiz kopyalama, dağıtma veya ticari kullanım yasaktır.
+          İşletmenize ait stok verileri size aittir.
+        </p>
+
+        <h2>6. Ücretlendirme</h2>
+        <p>
+          Uygulama içi satın almalar (depo kapasitesi vb.) Google Play faturalandırma
+          kurallarına tabidir. Fiyatlar ve paketler önceden haber verilmeksizin
+          güncellenebilir.
+        </p>
+
+        <h2>7. Hizmetin Askıya Alınması ve Fesih</h2>
+        <p>
+          Şartların ihlali, güvenlik riski veya yasal zorunluluk hâlinde hesabınız
+          askıya alınabilir veya sonlandırılabilir. İşletme sahibi, verilerinin
+          silinmesini talep edebilir; talep KVKK/GDPR süreçlerine uygun işlenir.
+        </p>
+
+        <h2>8. Sorumluluk Sınırlaması</h2>
+        <p>
+          Uygulama stok yönetimini kolaylaştırmak içindir; muhasebe veya yasal
+          defter tutma yerine geçmez. Veri kaybı, iş kesintisi veya dolaylı zararlardan
+          dolayı yasaların izin verdiği azami ölçüde sorumluluk kabul edilmez.
+          Kritik iş kararlarında bağımsız doğrulama yapmanız önerilir.
+        </p>
+
+        <h2>9. Üçüncü Taraf Hizmetler</h2>
+        <p>
+          Uygulama Google Firebase, Google Sign-In ve Google Play hizmetlerini kullanır.
+          Bu hizmetlerin kendi kullanım şartları geçerlidir.
+        </p>
+
+        <h2>10. Uygulanacak Hukuk ve Uyuşmazlık</h2>
+        <p>
+          Bu Şartlar Türkiye Cumhuriyeti kanunlarına tabidir. Uyuşmazlıklarda
+          Türkiye mahkemeleri ve icra daireleri yetkilidir.
+        </p>
+
+        <h2>11. Değişiklikler ve İletişim</h2>
+        <p>
+          Şartlar güncellenebilir; önemli değişiklikler uygulama veya bu sayfa
+          üzerinden duyurulur. Sorularınız için:
+          <a href="mailto:destek@buildsysstock.app">destek@buildsysstock.app</a>
+        </p>
+      </div>
+
+      <!-- English -->
+      <div data-lang="en">
+        <h1>Terms of Use</h1>
+        <p class="updated">Last updated: 6 June 2026</p>
+
+        <p>
+          These Terms of Use (“Terms”) govern your use of the <strong>Buildsys Stock</strong>
+          mobile application (“App”). By downloading, registering, or using the App,
+          you agree to these Terms.
+        </p>
+
+        <div class="note">
+          Data is processed on <strong>Google Firebase</strong>;
+          operational photos are deleted after <strong>30 days</strong>;
+          passwords are stored in <strong>encrypted (hashed)</strong> form.
+          See our <a href="gizlilik.html?lang=en">Privacy Policy</a> for details.
+        </div>
+
+        <h2>1. Service Description</h2>
+        <p>
+          Buildsys Stock is an enterprise inventory management application for
+          warehouses, stock movements, goods receipt, transfers, consumption, and
+          approvals. The service is provided “as is”; uninterrupted access is not guaranteed.
+        </p>
+
+        <h2>2. Accounts and Authorization</h2>
+        <ul>
+          <li>Each enterprise is identified by a unique enterprise ID.</li>
+          <li>An admin account is created at setup; operator accounts are created by the admin.</li>
+          <li>You are responsible for keeping credentials confidential; report unauthorized use promptly.</li>
+          <li>Google sign-in is optional and links to your existing enterprise account.</li>
+        </ul>
+
+        <h2>3. Acceptable Use</h2>
+        <p>You must not:</p>
+        <ul>
+          <li>Access data without authorization or interfere with other enterprises’ data</li>
+          <li>Submit false stock movements, misleading photos, or documents</li>
+          <li>Attempt to bypass security measures</li>
+          <li>Reverse engineer the App or scrape data automatically</li>
+          <li>Use the App in violation of applicable law</li>
+        </ul>
+
+        <h2>4. Data and Content</h2>
+        <ul>
+          <li>You are responsible for the accuracy of stock data and photos you upload.</li>
+          <li>Data is stored on Google Firebase servers; regional and backup policies are managed by Google.</li>
+          <li>Photos are retained for up to 30 days from upload, then automatically deleted.</li>
+          <li>Excel archives and movement records may be kept longer for business purposes.</li>
+        </ul>
+
+        <h2>5. Intellectual Property</h2>
+        <p>
+          The App, interface, branding, and software belong to Buildsys Stock.
+          Unauthorized copying or commercial use is prohibited. Your enterprise
+          stock data remains yours.
+        </p>
+
+        <h2>6. Billing</h2>
+        <p>
+          In-app purchases (depot capacity, etc.) are subject to Google Play billing
+          policies. Prices and packages may change without prior notice.
+        </p>
+
+        <h2>7. Suspension and Termination</h2>
+        <p>
+          Accounts may be suspended or terminated for Terms violations, security risks,
+          or legal requirements. Enterprise owners may request data deletion;
+          requests are handled per KVKK/GDPR procedures.
+        </p>
+
+        <h2>8. Limitation of Liability</h2>
+        <p>
+          The App facilitates inventory management; it does not replace accounting
+          or legal record-keeping. To the maximum extent permitted by law, we are
+          not liable for data loss, business interruption, or indirect damages.
+          Verify critical decisions independently.
+        </p>
+
+        <h2>9. Third-Party Services</h2>
+        <p>
+          The App uses Google Firebase, Google Sign-In, and Google Play.
+          Their respective terms apply.
+        </p>
+
+        <h2>10. Governing Law</h2>
+        <p>
+          These Terms are governed by the laws of the Republic of Türkiye.
+          Turkish courts and enforcement offices have jurisdiction.
+        </p>
+
+        <h2>11. Changes and Contact</h2>
+        <p>
+          We may update these Terms; material changes will be announced in the App
+          or on this page. Contact:
+          <a href="mailto:destek@buildsysstock.app">destek@buildsysstock.app</a>
+        </p>
+      </div>
+    </article>
+
+    <footer>
+      <a href="gizlilik.html">Gizlilik Politikası / Privacy Policy</a>
+      · © 2026 Buildsys Stock
+    </footer>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+      });
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      document.title = lang === 'tr'
+        ? 'Buildsys Stock — Kullanım Şartları'
+        : 'Buildsys Stock — Terms of Use';
+    }
+    var params = new URLSearchParams(location.search);
+    if (params.get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>
