@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buildsys Stock — Gizlilik Politikası</title>
+  <style>
+    :root {
+      --primary: #4a0000;
+      --primary-deep: #2d0000;
+      --accent: #c9a227;
+      --text: #1a1a1a;
+      --muted: #5c5c5c;
+      --bg: #f7f5f2;
+      --card: #ffffff;
+      --border: #e8e4de;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .topbar {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand { font-weight: 700; letter-spacing: 0.3px; }
+    .lang-switch button {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.45);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 6px;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--primary-deep);
+      font-weight: 600;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 24px rgba(74,0,0,0.06);
+    }
+    h1 {
+      color: var(--primary);
+      font-size: 1.75rem;
+      margin-bottom: 8px;
+    }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 28px; }
+    h2 {
+      color: var(--primary-deep);
+      font-size: 1.1rem;
+      margin: 28px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
+    }
+    p, li { color: #333; margin-bottom: 10px; }
+    ul { padding-left: 22px; margin-bottom: 14px; }
+    .note {
+      background: #fdf8eb;
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--primary); }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Buildsys Stock</div>
+    <div class="lang-switch">
+      <button type="button" id="btn-tr" class="active" onclick="setLang('tr')">Türkçe</button>
+      <button type="button" id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article class="card">
+      <!-- Türkçe -->
+      <div data-lang="tr" class="visible">
+        <h1>Gizlilik Politikası</h1>
+        <p class="updated">Son güncelleme: 6 Haziran 2026</p>
+
+        <p>
+          Bu Gizlilik Politikası, <strong>Buildsys Stock</strong> mobil uygulamasını
+          (“Uygulama”) kullanırken kişisel verilerinizin nasıl toplandığını, işlendiğini
+          ve korunduğunu açıklar. Politika, 6698 sayılı Kişisel Verilerin Korunması
+          Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) ilkelerine
+          uygun olarak hazırlanmıştır.
+        </p>
+
+        <div class="note">
+          <strong>Özet:</strong> Verileriniz Google Firebase altyapısında saklanır;
+          operasyonel fotoğraflar en fazla <strong>30 gün</strong> tutulur;
+          şifreler düz metin olarak değil, <strong>şifreli (hash)</strong> biçimde saklanır.
+        </div>
+
+        <h2>1. Veri Sorumlusu</h2>
+        <p>
+          Veri sorumlusu: Buildsys Stock / uygulama işletmecisi.<br>
+          İletişim: <a href="mailto:destek@buildsysstock.app">destek@buildsysstock.app</a>
+        </p>
+
+        <h2>2. Toplanan Veriler</h2>
+        <ul>
+          <li>İşletme kimliği, kullanıcı adı ve rol bilgisi (admin / operatör)</li>
+          <li>E-posta adresi (Google ile giriş veya yönetici kaydı)</li>
+          <li>Stok, depo, hareket ve onay kayıtları</li>
+          <li>Operasyonel kanıt fotoğrafları (mal kabul, sarf, talep vb.)</li>
+          <li>Cihaz bildirim jetonu (FCM — yalnızca onay bildirimleri için)</li>
+          <li>Teknik günlük ve güvenlik doğrulama verileri (Firebase App Check)</li>
+        </ul>
+
+        <h2>3. Verilerin İşlenme Amaçları</h2>
+        <ul>
+          <li>Depo ve stok yönetimi hizmetinin sunulması</li>
+          <li>Kullanıcı kimlik doğrulama ve yetkilendirme</li>
+          <li>Onay süreçleri ve işlem geçmişinin tutulması</li>
+          <li>Güvenlik, dolandırıcılık önleme ve hizmet sürekliliği</li>
+          <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+        </ul>
+
+        <h2>4. Hukuki Dayanak (KVKK / GDPR)</h2>
+        <ul>
+          <li><strong>Sözleşmenin ifası:</strong> Uygulama hizmetinin sağlanması</li>
+          <li><strong>Meşru menfaat:</strong> Güvenlik ve operasyonel verimlilik</li>
+          <li><strong>Açık rıza:</strong> Bildirimler ve isteğe bağlı Google girişi</li>
+          <li><strong>Yasal yükümlülük:</strong> Mevzuattan kaynaklanan saklama</li>
+        </ul>
+
+        <h2>5. Verilerin Saklanması ve Aktarımı</h2>
+        <p>
+          Tüm uygulama verileri <strong>Google Firebase</strong> (Firestore, Storage,
+          Authentication) sunucularında saklanır. Sunucular Avrupa veya Google’ın
+          seçtiği bölgelerde bulunabilir; aktarım GDPR Madde 46 kapsamında standart
+          sözleşme hükümleri ve Firebase veri işleme şartları ile korunur.
+        </p>
+        <p>
+          Üçüncü taraf işleyiciler: Google LLC (Firebase, Google Sign-In).
+        </p>
+
+        <h2>6. Güvenlik Önlemleri</h2>
+        <ul>
+          <li>Kullanıcı şifreleri <strong>BCrypt ile hash’lenerek</strong> saklanır; düz metin tutulmaz.</li>
+          <li>Firebase Security Rules ile işletme bazlı (multi-tenant) erişim kontrolü uygulanır.</li>
+          <li>Firebase App Check ile yetkisiz istemci erişimi sınırlandırılır.</li>
+          <li>İletişim TLS/SSL ile şifrelenir.</li>
+        </ul>
+
+        <h2>7. Fotoğraf ve Arşiv Saklama Süresi</h2>
+        <p>
+          Operasyonel kanıt fotoğrafları, yükleme tarihinden itibaren en fazla
+          <strong>30 gün</strong> saklanır; süre sonunda otomatik olarak silinir.
+          Excel arşivleri ve stok hareket kayıtları işletme politikası ve yasal
+          yükümlülükler çerçevesinde daha uzun süre tutulabilir.
+        </p>
+
+        <h2>8. Haklarınız (KVKK md. 11 / GDPR)</h2>
+        <p>Aşağıdaki haklara sahipsiniz:</p>
+        <ul>
+          <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+          <li>İşlenmişse buna ilişkin bilgi talep etme</li>
+          <li>Amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+          <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+          <li>KVKK/GDPR kapsamında silinmesini veya yok edilmesini talep etme</li>
+          <li>İşlemenin kısıtlanmasını isteme</li>
+          <li>Veri taşınabilirliği (GDPR)</li>
+          <li>İtiraz etme ve şikâyet hakkı (KVKK: Kişisel Verileri Koruma Kurumu)</li>
+        </ul>
+        <p>
+          Talepleriniz için: <a href="mailto:destek@buildsysstock.app">destek@buildsysstock.app</a>
+          — en geç 30 gün içinde yanıt verilir.
+        </p>
+
+        <h2>9. Çocukların Gizliliği</h2>
+        <p>
+          Uygulama 18 yaş altı bireylere yönelik değildir. Bilerek çocuklardan
+          kişisel veri toplanmaz.
+        </p>
+
+        <h2>10. Politika Değişiklikleri</h2>
+        <p>
+          Bu politika güncellenebilir. Önemli değişiklikler uygulama içinde veya
+          bu sayfada duyurulur. Güncelleme tarihi sayfa başında belirtilir.
+        </p>
+      </div>
+
+      <!-- English -->
+      <div data-lang="en">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: 6 June 2026</p>
+
+        <p>
+          This Privacy Policy explains how personal data is collected, processed,
+          and protected when you use the <strong>Buildsys Stock</strong> mobile
+          application (“App”). It is prepared in line with the Turkish Personal
+          Data Protection Law (KVKK) and the EU General Data Protection Regulation (GDPR).
+        </p>
+
+        <div class="note">
+          <strong>Summary:</strong> Your data is stored on <strong>Google Firebase</strong>;
+          operational photos are kept for up to <strong>30 days</strong>;
+          passwords are stored in <strong>encrypted (hashed)</strong> form, never in plain text.
+        </div>
+
+        <h2>1. Data Controller</h2>
+        <p>
+          Data controller: Buildsys Stock / application operator.<br>
+          Contact: <a href="mailto:destek@buildsysstock.app">destek@buildsysstock.app</a>
+        </p>
+
+        <h2>2. Data We Collect</h2>
+        <ul>
+          <li>Enterprise ID, username, and role (admin / operator)</li>
+          <li>Email address (Google sign-in or admin registration)</li>
+          <li>Inventory, depot, movement, and approval records</li>
+          <li>Operational proof photos (goods receipt, consumption, requests, etc.)</li>
+          <li>Device notification token (FCM — approval alerts only)</li>
+          <li>Technical logs and security attestation data (Firebase App Check)</li>
+        </ul>
+
+        <h2>3. Purposes of Processing</h2>
+        <ul>
+          <li>Providing warehouse and inventory management services</li>
+          <li>User authentication and authorization</li>
+          <li>Maintaining approval workflows and audit history</li>
+          <li>Security, fraud prevention, and service continuity</li>
+          <li>Compliance with legal obligations</li>
+        </ul>
+
+        <h2>4. Legal Basis (KVKK / GDPR)</h2>
+        <ul>
+          <li><strong>Contract performance:</strong> Delivering the App service</li>
+          <li><strong>Legitimate interest:</strong> Security and operational efficiency</li>
+          <li><strong>Consent:</strong> Notifications and optional Google sign-in</li>
+          <li><strong>Legal obligation:</strong> Statutory retention requirements</li>
+        </ul>
+
+        <h2>5. Storage and Transfers</h2>
+        <p>
+          All application data is stored on <strong>Google Firebase</strong> (Firestore,
+          Storage, Authentication). Servers may be located in the EU or regions selected
+          by Google. Transfers are safeguarded under GDPR Article 46 and Firebase’s
+          data processing terms.
+        </p>
+        <p>Sub-processors include: Google LLC (Firebase, Google Sign-In).</p>
+
+        <h2>6. Security Measures</h2>
+        <ul>
+          <li>Passwords are stored using <strong>BCrypt hashing</strong>; plain text is never kept.</li>
+          <li>Enterprise-scoped Firebase Security Rules enforce access control.</li>
+          <li>Firebase App Check limits unauthorized client access.</li>
+          <li>All communication is encrypted via TLS/SSL.</li>
+        </ul>
+
+        <h2>7. Photo and Archive Retention</h2>
+        <p>
+          Operational proof photos are retained for a maximum of <strong>30 days</strong>
+          from upload, then automatically deleted. Excel archives and stock movement
+          records may be kept longer under business policy and legal requirements.
+        </p>
+
+        <h2>8. Your Rights (KVKK / GDPR)</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Know whether your personal data is processed</li>
+          <li>Request information about processing</li>
+          <li>Request correction of inaccurate data</li>
+          <li>Request erasure or restriction of processing</li>
+          <li>Data portability (GDPR)</li>
+          <li>Object to processing and lodge a complaint with a supervisory authority</li>
+        </ul>
+        <p>
+          Requests: <a href="mailto:destek@buildsysstock.app">destek@buildsysstock.app</a>
+          — we respond within 30 days.
+        </p>
+
+        <h2>9. Children’s Privacy</h2>
+        <p>
+          The App is not intended for users under 18. We do not knowingly collect
+          data from children.
+        </p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>
+          We may update this policy. Material changes will be announced in the App
+          or on this page. The revision date is shown at the top.
+        </p>
+      </div>
+    </article>
+
+    <footer>
+      <a href="sartlar.html">Kullanım Şartları / Terms of Use</a>
+      · © 2026 Buildsys Stock
+    </footer>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function (el) {
+        el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+      });
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+      document.title = lang === 'tr'
+        ? 'Buildsys Stock — Gizlilik Politikası'
+        : 'Buildsys Stock — Privacy Policy';
+    }
+    var params = new URLSearchParams(location.search);
+    if (params.get('lang') === 'en') setLang('en');
+  </script>
+</body>
+</html>
