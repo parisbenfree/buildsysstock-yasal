@@ -1,1 +1,15 @@
-E3:B5:17:86:5A:6B:5C:7B:DB:81:38:2B:48:16:1C:57:61:3C:7D:EB:5A:4C:25:EA:54:D7:B5:AB:0E:D7:58:4C
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.buildsys03.stok",
+      "sha256_cert_fingerprints": [
+        "E3:B5:17:86:5A:6B:5C:7B:DB:81:38:2B:48:16:1C:57:61:3C:7D:EB:5A:4C:25:EA:54:D7:B5:AB:0E:D7:58:4C",
+        "ED:87:3C:6D:A0:5D:D0:8F:04:B5:C7:68:B8:48:18:3A:B4:E8:20:ED:5C:D8:A7:78:41:72:FC:43:FC:77:F1:95"
+      ]
+    }
+  }
+]
